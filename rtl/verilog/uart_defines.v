@@ -134,6 +134,9 @@
 // CAUTION: doesn't work with current version of OR1200
 //`define DATA_BUS_WIDTH_8
 
+`ifndef UART_DEFINES_V
+`define UART_DEFINES_V
+
 `ifdef DATA_BUS_WIDTH_8
  `define UART_ADDR_WIDTH 3
  `define UART_DATA_WIDTH 8
@@ -239,9 +242,4 @@
 `define VERBOSE_LINE_STATUS 0   // Details about the lsr (line status register)
 `define FAST_TEST   1           // 64/1024 packets are sent
 
-
-
-
-
-
-
+`endif // UART_DEFINES_V
